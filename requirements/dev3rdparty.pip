@@ -1,0 +1,28 @@
+# requirements for development
+
+# load everything from production 3rdparty
+-r prod3rdparty.pip
+
+django-debug-toolbar
+django-extensions
+
+# tests
+-e git://github.com/jbalogh/test-utils.git#egg=test-utils
+-e git://github.com/zalun/python-nose.git#egg=nose
+-e git://github.com/jbalogh/django-nose.git#egg=django_nose
+mock
+lettuce
+nose-progressive
+
+# code quality
+pylint
+coverage
+django-coverage
+figleaf
+-e git://github.com/jbalogh/check.git#egg=check
+
+# publish stuff
+fabric
+
+# shell
+ipython

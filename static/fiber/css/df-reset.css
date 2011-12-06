@@ -1,0 +1,199 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.3.0
+build: 3167
+*/
+
+#df-wpr-layer div,
+#df-wpr-layer dl,
+#df-wpr-layer dt,
+#df-wpr-layer dd,
+#df-wpr-layer ul,
+#df-wpr-layer ol,
+#df-wpr-layer li,
+#df-wpr-layer h1,
+#df-wpr-layer h2,
+#df-wpr-layer h3,
+#df-wpr-layer h4,
+#df-wpr-layer h5,
+#df-wpr-layer h6,
+#df-wpr-layer pre,
+#df-wpr-layer code,
+#df-wpr-layer ins,
+#df-wpr-layer form,
+#df-wpr-layer fieldset,
+#df-wpr-layer legend,
+#df-wpr-layer input,
+#df-wpr-layer textarea,
+#df-wpr-layer p
+#df-wpr-layer a,
+#df-wpr-layer blockquote,
+#df-wpr-layer th,
+#df-wpr-layer td,
+
+#df-wpr-sidebar div,
+#df-wpr-sidebar dl,
+#df-wpr-sidebar dt,
+#df-wpr-sidebar dd,
+#df-wpr-sidebar ul,
+#df-wpr-sidebar ol,
+#df-wpr-sidebar li,
+#df-wpr-sidebar h1,
+#df-wpr-sidebar h2,
+#df-wpr-sidebar h3,
+#df-wpr-sidebar h4,
+#df-wpr-sidebar h5,
+#df-wpr-sidebar h6,
+#df-wpr-sidebar pre,
+#df-wpr-sidebar code,
+#df-wpr-sidebar ins,
+#df-wpr-sidebar form,
+#df-wpr-sidebar fieldset,
+#df-wpr-sidebar legend,
+#df-wpr-sidebar input,
+#df-wpr-sidebar textarea,
+#df-wpr-sidebar p,
+#df-wpr-sidebar a,
+#df-wpr-sidebar blockquote,
+#df-wpr-sidebar th,
+#df-wpr-sidebar td {
+	margin: 0;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font-family: 'Lucida Grande', 'DejaVu Sans', 'Bitstream Vera Sans', Verdana, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000;
+	background-color: transparent;
+}
+
+#df-wpr-layer table,
+#df-wpr-sidebar table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#df-wpr-layer fieldset,
+#df-wpr-layer img,
+
+#df-wpr-sidebar fieldset,
+#df-wpr-sidebar img {
+	border: 0;
+}
+
+#df-wpr-layer address,
+#df-wpr-layer caption,
+#df-wpr-layer cite,
+#df-wpr-layer code,
+#df-wpr-layer ins,
+#df-wpr-layer dfn,
+#df-wpr-layer em,
+#df-wpr-layer strong,
+#df-wpr-layer th,
+#df-wpr-layer var,
+
+#df-wpr-sidebar address,
+#df-wpr-sidebar caption,
+#df-wpr-sidebar cite,
+#df-wpr-sidebar code,
+#df-wpr-sidebar ins,
+#df-wpr-sidebar dfn,
+#df-wpr-sidebar em,
+#df-wpr-sidebar strong,
+#df-wpr-sidebar th,
+#df-wpr-sidebar var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+#df-wpr-layer li,
+#df-wpr-sidebar li {
+	list-style: none;
+	background: none;
+}
+
+#df-wpr-layer caption,
+#df-wpr-layer th,
+
+#df-wpr-sidebar caption,
+#df-wpr-sidebar th {
+	text-align: left;
+}
+
+#df-wpr-layer h1,
+#df-wpr-layer h2,
+#df-wpr-layer h3,
+#df-wpr-layer h4,
+#df-wpr-layer h5,
+#df-wpr-layer h6,
+
+#df-wpr-sidebar h1,
+#df-wpr-sidebar h2,
+#df-wpr-sidebar h3,
+#df-wpr-sidebar h4,
+#df-wpr-sidebar h5,
+#df-wpr-sidebar h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+#df-wpr-layer q:before,
+#df-wpr-layer q:after,
+
+#df-wpr-sidebar q:before,
+#df-wpr-sidebar q:after {
+	content: '';
+}
+
+#df-wpr-layer abbr,
+#df-wpr-layer acronym,
+
+#df-wpr-sidebar abbr,
+#df-wpr-sidebar acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+#df-wpr-layer sup,
+#df-wpr-sidebar sup {
+	vertical-align: text-top;
+}
+
+#df-wpr-layer sub,
+#df-wpr-sidebar sub, {
+	vertical-align: text-bottom;
+}
+
+#df-wpr-layer input,
+#df-wpr-layer textarea,
+#df-wpr-layer select,
+
+#df-wpr-sidebar input,
+#df-wpr-sidebar textarea,
+#df-wpr-sidebar select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	background: none;
+}
+
+#df-wpr-layer input,
+#df-wpr-layer textarea,
+#df-wpr-layer select,
+
+#df-wpr-sidebar input,
+#df-wpr-sidebar textarea,
+#df-wpr-sidebar select {
+	font-size: 100%;
+}
+
+#df-wpr-layer legend,
+#df-wpr-sidebar legend {
+	color: #000;
+}

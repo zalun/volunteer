@@ -1,0 +1,7 @@
+development.db
+_build
+settings_local.py
+fab_settings_local.py
+*.pyc
+.coverage
+media/uploads

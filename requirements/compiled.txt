@@ -1,0 +1,7 @@
+# These libraries are required to run the site, but need to compile themselves
+# so we can't distribute them with flightdeck-lib
+
+MySQL-python==1.2.3c1
+simplejson==2.1.1
+lxml==2.3
+Jinja2==2.5.5
