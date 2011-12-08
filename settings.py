@@ -141,7 +141,7 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': False,
         },
-        'cms': {
+        'volunteer': {
             'propagate': True,
             'handlers': ['console', 'syslog'],  # , 'mail_admins'],
             'level': 'INFO',
@@ -205,8 +205,12 @@ INSTALLED_APPS = [
     'gunicorn',
     # DEV
     'django_nose',
-    # CMS APPS
+    # APPS
+    'person',
+    'serve',
     'base',
+    'office',
+    # CMS
     'piston',
     'mptt',
     'compressor',
@@ -216,11 +220,9 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
 ]
 
-DEV_APPS = (
+# Which from INSTALLED_APPS should be removed if in PRODUCTION
+DEV_APPS = [
     'django_nose',
-)
-# Which from above Middleware classes should be removed if in PRODUCTION
-
-
-# Fiddle settings
-FIDDLE_HASHTAG_LENGTH = 5
+]
+# Which from Middleware classes should be removed if in PRODUCTION
+DEV_MIDDLEWARE_CLASSES = []

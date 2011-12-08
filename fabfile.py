@@ -315,6 +315,7 @@ def update_requirements(require='dev3rdparty'):
     """Runs pip install -r requirements on the right file
     """
     _default('local')
+    _ve_local("pip install -r requirements/compiled.pip")
     _ve_local("pip install -r requirements/%s.pip" % require)
     test()
 
@@ -374,20 +375,25 @@ def manage(*args):
     _ve_local('./manage.py %s' % ' '.join(args))
 
 
-def schema(app, sattr='auto', mattr=None):
+def schemamigration(app, sattr='--auto', mattr=None):
     """Change the database for the given app
 
     :param: app (string) which app was changed
-    :param: attr (string) additional attributes, defaults to "auto". Other
-            useful setting is ``initial``
+    :param: sattr (string) schemamigration additional attributes,
+            defaults to "auto". other useful setting is ``--initial``
+    :param: mattr (string) migrate additional attributes, defaults to None.
 
-    Example: fab schema:fiddle
+    Example: fab schema:appname
+    Example: fab schema:appname,--initial
+    Example: fab schema:appname,001+--fake
     """
     _default('local')
-    _ve_local('./manage.py schemamigration %s --%s' % (app, sattr))
+    sattr = ' '.join(sattr.split('+'))
+    _ve_local('./manage.py schemamigration %s %s' % (app, sattr))
     mcommand = './manage.py migrate %s' % app
     if mattr:
-        mcommand += ' --%s' % mattr
+        mattr = ' '.join(mattr.split('+'))
+        mcommand += ' %s' % mattr
     _ve_local(mcommand)
 
 
@@ -400,7 +406,8 @@ def migrate(app=None, attr=None):
     app = app or ''
     command = './manage.py migrate %s' % app
     if attr:
-        command += ' --%s' % attr
+        attr = ' '.join(attr.split('+'))
+        command += ' %s' % attr
     _ve_local(command)
 
 

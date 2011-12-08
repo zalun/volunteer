@@ -1,7 +1,7 @@
 import os
 
 # jsFiddle generic pplications
-APPS = ['base']
+APPS = ['base', 'office', 'person', 'serve']
 ALLAPPS = APPS[:]
 
 PROJECT_DEV = 0         # edit all apps
