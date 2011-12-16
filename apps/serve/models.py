@@ -36,6 +36,9 @@ class Volunteer(BaseModel):
     skills = models.TextField(blank=True, default='',
             help_text='Comma separated list of skills')
 
+    def __unicode__(self):
+        return self.user
+
 
 class Ward(BaseModel):
     """Profile for the ward

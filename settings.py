@@ -89,6 +89,7 @@ STATICFILES_FINDERS = DEFAULT_SETTINGS.STATICFILES_FINDERS + (
     'compressor.finders.CompressorFinder',
 )
 
+AUTH_PROFILE_MODULE = 'person.Profile'
 
 # Nose tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
@@ -210,6 +211,7 @@ INSTALLED_APPS = [
     'serve',
     'base',
     'office',
+    'livery',
     # CMS
     'piston',
     'mptt',

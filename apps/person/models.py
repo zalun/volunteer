@@ -25,7 +25,7 @@ class Profile(BaseModel):
     #:
     user = models.OneToOneField(User)
     #:
-    phone = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100, blank=True, default='')
     #:
     address = models.TextField(blank=True, default='')
     #:
@@ -37,3 +37,5 @@ class Profile(BaseModel):
     #:
     date_of_birth = models.DateField()
 
+    def __unicode__(self):
+        return '%s %s' % (self.user.first_name, self.user.last_name)
