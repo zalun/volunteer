@@ -101,7 +101,7 @@ class MadeByModel(BaseModel):
         abstract = True
     #: :class:`django.contrib.auth.models.User` object
     created_by = models.ForeignKey(User,
-            related_name='created_%(app_label)s_%(class)ss')
+            related_name='created_%(app_label)s_%(class)ss', blank=True)
     #: :class:`django.contrib.auth.models.User` object (optional on create)
     modified_by = models.ForeignKey(User, null=True, blank=True,
             related_name='modified_%(app_label)s_%(class)ss')
@@ -119,9 +119,11 @@ class MadeByModel(BaseModel):
         if not self._state.creating and self.modified_by:
             error = False
         if error:
-            _log.error("No author provided in %s (%s)" % (
-                self.__class__.__name__, self))
-            raise IntegrityError
+            msg = ("No author provided in %s (%s) (created_by: %s,"
+                    " modified_by: %s)") % (self.__class__.__name__, self,
+                            self.created_by, self.modified_by)
+            _log.error(msg)
+            raise IntegrityError(msg)
         return super(MadeByModel, self).clean()
 
 

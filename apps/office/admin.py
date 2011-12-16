@@ -11,5 +11,4 @@ from office.models import Opinion
 _log = logging.getLogger('volunteer.%s' % __name__)
 
 
-
 admin.site.register(Opinion)
